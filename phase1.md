@@ -1,4 +1,4 @@
-### Phase 1: Reconnaissance and Scanning
+### + Phase 1: Reconnaissance and Scanning
 
 The first step involved scanning the target IP address `192.168.3.188` to identify active services and open ports.
 

@@ -32,7 +32,7 @@ sudo nano /etc/suricata/suricata.yaml
    * ⁠af-packet⁠: Assign specific network interface cards (NICs) to inspect incoming/outgoing traffic.  
    *⁠ default-rule path⁠: Verify path is set to ⁠/var/lib/suricata/rules⁠.
 
-+ Test configuration syntax validity prior to restarting:
+* Test configuration syntax validity prior to restarting:
 ```bash
 sudo suricata -T -c /etc/suricata/suricata.yaml
 sudo systemctl restart suricata

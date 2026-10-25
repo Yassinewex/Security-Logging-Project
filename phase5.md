@@ -29,7 +29,7 @@ sudo nano /etc/suricata/suricata.yaml
 ```
 + Key Configuration Parameters:
    * ⁠HOME_NET⁠: Define protected internal IP ranges (e.g., ⁠[192.168.3.0/24]⁠).
-   * ⁠af-packet⁠: Assign specific network interface cards (NICs) to inspect incoming/outgoing traffic.
+   * ⁠af-packet⁠: Assign specific network interface cards (NICs) to inspect incoming/outgoing traffic.  
    *⁠ default-rule-path⁠: Verify path is set to ⁠/var/lib/suricata/rules⁠.
 
 + Test configuration syntax validity prior to restarting:

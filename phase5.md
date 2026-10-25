@@ -28,9 +28,9 @@ Configure Suricata by editing ⁠/etc/suricata/suricata.yaml⁠ to specify the m
 sudo nano /etc/suricata/suricata.yaml
 ```
 * Key Configuration Parameters:
-   * ⁠HOME_NET⁠: Define protected internal IP ranges (e.g., ⁠[192.168.3.0/24]⁠).
-   * ⁠af-packet⁠: Assign specific network interface cards (NICs) to inspect incoming/outgoing traffic.  
-   *⁠ default-rule path⁠: Verify path is set to ⁠/var/lib/suricata/rules⁠.
+   + ⁠HOME_NET⁠: Define protected internal IP ranges (e.g., ⁠[192.168.3.0/24]⁠).
+   + ⁠af-packet⁠: Assign specific network interface cards (NICs) to inspect incoming/outgoing traffic.  
+   + default-rule path⁠: Verify path is set to ⁠/var/lib/suricata/rules⁠.
 
 * Test configuration syntax validity prior to restarting:
 ```bash
@@ -45,11 +45,11 @@ sudo systemctl restart suricata
  ⁠        -suricata.log⁠: System operational, startup, engine initialization, and module error logs.
 + Commands for Real-time Monitoring & Troubleshooting:
   
-# * Monitor real-time intrusion alerts:
+####  Monitor real-time intrusion alerts:
 ```bash
 sudo tail -f /var/log/suricata/fast.log
 ```
-# * Inspect system operational and error logs:
+####  Inspect system operational and error logs:
 ```bash
 sudo tail -f /var/log/suricata/suricata.log
 ```

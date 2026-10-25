@@ -37,7 +37,7 @@ sudo nano /etc/suricata/suricata.yaml
 sudo suricata -T -c /etc/suricata/suricata.yaml
 sudo systemctl restart suricata
 ```
-#### 5. Log Management & Analysis
+####5. Log Management & Analysis
 
 * Suricata outputs standard operation logs and threat detection alerts to ⁠/var/log/suricata/⁠:  
       * Log Files:  

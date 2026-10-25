@@ -4,7 +4,7 @@ The first step involved scanning the target IP address `192.168.3.188` to identi
 
 ** Command: **
 ```text
-nmap 192.168.3.188'
+nmap 192.168.3.188
 ```
 Port 80/tcp    open  http
 Port 443/tcp   open  https

@@ -40,7 +40,7 @@ sudo systemctl restart suricata
 #### 5. Log Management & Analysis
 
 * Suricata outputs standard operation logs and threat detection alerts to ⁠/var/log/suricata/⁠:  
-      * Log Files:  
+        Log Files:  
  ⁠        + fast.log⁠: Line-based concise log containing individual alert triggers, signatures,classification,andIP/porttuples.  
  ⁠        + suricata.log⁠: System operational, startup, engine initialization, and module error logs.  
 

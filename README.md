@@ -11,6 +11,7 @@ This project documents the practical process of scanning a target environment, i
 
 ## 🛠️ Tools Used
 - **Nmap**: For network scanning and port discovery.
+- **Wapiti**: For web application vulnerability scanning.
 - **Apache2**: Web server and reverse proxy implementation.
 - **ModSecurity**: Open-source Web Application Firewall (WAF).
 
@@ -18,10 +19,14 @@ This project documents the practical process of scanning a target environment, i
 
 ### Phase 1: Reconnaissance and Scanning
 The first step involved scanning the target IP address `192.168.3.188` to identify active services and open ports. The scan results revealed the following open ports:
-Port 80/tcp    open  http
 
+```text
+Port 80/tcp    open  http
+Port 443/tcp   open  https
+Port 3306/tcp  open  mysql
+```
 ### Phase 2: Vulnerability Analysis
-An application vulnerability assessment was conducted on the ⁠/cgi-bin/badstore.cgi⁠ script. An SQL Injection vulnerability was identified within the ⁠searchquery⁠ parameter, allowing for potential manipulation of the backend database.
+An application vulnerability assessment was conducted on the ⁠/cgi-bin/badstore.cgi⁠ script using Wapiti to identify security weaknesses. The analysis revealed an SQL Injection vulnerability within the ⁠searchquery⁠ parameter, allowing for potential manipulation of the backend database.
 
 ### Phase 3: Infrastructure Hardening (Reverse Proxy Configuration)
 To secure the backend server, an Apache Reverse Proxy was configured. This acts as an intermediary, forwarding client requests to the backend while hiding the internal server structure. The ⁠reverse-proxy.conf⁠ file was set up with ⁠ProxyPass⁠ and ⁠ProxyPassReverse⁠ directives pointing to the internal server.
@@ -31,5 +36,5 @@ To mitigate threats such as SQL Injection, ModSecurity was installed and integra
 
 ## 🛡️ Conclusion
 The successful implementation of the Reverse Proxy and ModSecurity provides a robust defensive layer, effectively intercepting and neutralizing malicious requests targeting the application.
-Port 443/tcp   open  https
-Port 3306/tcp  open  mysql
+
+

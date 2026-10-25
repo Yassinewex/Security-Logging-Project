@@ -8,12 +8,14 @@ This project documents the practical process of scanning a target environment, i
 - **Analyze** application request flows to detect potential injection vulnerabilities.
 - **Deploy** an Apache Reverse Proxy to isolate the backend infrastructure.
 - **Implement** ModSecurity to filter malicious traffic and protect against common web attacks.
+- **Deploy** Suricata to monitor network traffic and provide real-time intrusion detection and alerting capabilities.
 
 ## 🛠️ Tools Used
 - **Nmap**: For network scanning and port discovery.
 - **Wapiti**: For web application vulnerability scanning.
 - **Apache2**: Web server and reverse proxy implementation.
 - **ModSecurity**: Open-source Web Application Firewall (WAF).
+- **Suricata** : For real-time network traffic analysis and intrusion detection.
 
 ## 🚀 Implementation Steps
 
@@ -34,7 +36,12 @@ To secure the backend server, an Apache Reverse Proxy was configured. This acts 
 ### Phase 4: Implementing the Web Application Firewall (WAF)
 To mitigate threats such as SQL Injection, ModSecurity was installed and integrated into the Apache environment. The ⁠security2⁠ module was enabled, and the configuration was tested to ensure syntax integrity before restarting the Apache service.
 
-## 🛡️ Conclusion
-The successful implementation of the Reverse Proxy and ModSecurity provides a robust defensive layer, effectively intercepting and neutralizing malicious requests targeting the application.
+### Phase 5: Intrusion Detection System Deployment
+ * Deploy and configure Suricata as an Intrusion Detection System (IDS) to monitor network traffic in real time.  
+ * Implement rule-based detection to identify malicious activities, unauthorized access, and potential security threats.  
+ * Analyze Suricata alerts and logs to validate security configurations and confirm the effectiveness of the detection mechanisms.  
 
+## 🛡️ Conclusion
+
+The successful implementation of the Reverse Proxy and ModSecurity provides a robust defensive layer, effectively intercepting and neutralizing malicious requests targeting the application. Complementing this, the deployment of Suricata completes the defensive pipeline by offering real-time network traffic analysis and threat detection, ensuring comprehensive security monitoring and alerting against diverse vulnerabilities and attacks.
 
